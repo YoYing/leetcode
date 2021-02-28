@@ -1,15 +1,17 @@
-package com.yingxy.structure.list.array;
+package com.yingxy.structure.list;
 
-import com.yingxy.structure.list.MyList;
+import com.yingxy.structure.list.linked.MyLinkedList;
 
 /**
- * @description: 测试类
+ * @description:
  * @author: yingxiuyong
- * @create: 2021-02-18
+ * @create: 2021-02-20
  **/
 public class Main {
     public static void main(String[] args) {
-        MyList<Integer> officialList = new MyArrayList<Integer>(2);
+        // MyAbstractList<Integer> officialList = new MyArrayList<>();
+        // MyAbstractList<Integer> officialList = new MySingleLinkedList<>();
+        MyAbstractList<Integer> officialList = new MyLinkedList<>();
         officialList.add(1);
         officialList.add(2);
         officialList.add(3);

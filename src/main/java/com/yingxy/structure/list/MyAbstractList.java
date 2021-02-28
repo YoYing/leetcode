@@ -16,7 +16,7 @@ public abstract class MyAbstractList<E> implements MyList<E> {
     }
 
     protected void rangeCheck(int index) {
-        if (index >= size) {
+        if (index > size) {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
         }
     }

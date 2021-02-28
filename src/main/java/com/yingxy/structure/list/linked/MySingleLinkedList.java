@@ -119,6 +119,26 @@ public class MySingleLinkedList<E> extends MyAbstractList<E> {
         return node;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+        string.append("size=").append(size).append(", [");
+        for (int i = 0; i < size; i++) {
+            if (i != 0) {
+                string.append(", ");
+            }
+
+            if (node(i).next == null) {
+                string.append(node(i).element).append("_").append("null");
+            } else {
+                string.append(node(i).element).append("_").append(node(i).next.element);
+            }
+
+        }
+        string.append("]");
+        return string.toString();
+    }
+
     /**
      * 实际保存的元素
      */
